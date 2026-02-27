@@ -39,29 +39,42 @@ Aplikasi ini merupakan aplikasi mobile sederhana berbasis Flutter yang berfungsi
 | `TextButton` | Tombol di dalam dialog dan AppBar actions |
 | `SafeArea` | Menghindari konten tertutup oleh status bar atau notch |
 
+
 ## 🔍 Tampilan Aplikasi
 
-**Home Page**
+### Home Page
 
-<img width="300" height="600" alt="image" src="https://github.com/user-attachments/assets/ace9ce9c-fbaf-45cd-b634-b14a76a8d1e3" />
+Halaman utama aplikasi yang menampilkan seluruh daftar artikel.
 
+<img width="300" alt="Home Page" src="https://github.com/user-attachments/assets/ace9ce9c-fbaf-45cd-b634-b14a76a8d1e3" />
 
+---
 
-<img width="300" height="600" alt="image" src="https://github.com/user-attachments/assets/c474f5e6-d005-4743-8625-342905695d40" />
+### More Option Icon
 
+Setiap artikel memiliki ikon titik tiga (⋮) di pojok kanan yang memberikan pilihan untuk mengedit atau menghapus artikel.
 
+<img width="300" alt="More Option" src="https://github.com/user-attachments/assets/02930ed6-6e5e-4f5c-b191-930f1abd65c5" />
 
-<img width="300" height="600" alt="image" src="https://github.com/user-attachments/assets/76ab6a39-79ea-4db5-b050-5ac8c60bf38c" />
+---
 
+### Fitur Delete
 
+Ketika user memilih **Delete**, akan muncul pop-up konfirmasi sebelum artikel benar-benar dihapus.
 
-<img width="300" height="600" alt="image" src="https://github.com/user-attachments/assets/41e93ecb-c15e-4e55-ab1a-d91c4da43d49" />
+<img width="300" alt="Delete Confirmation" src="https://github.com/user-attachments/assets/7cd5cbb3-8792-462c-bcbf-b2f76da3be7d" />
 
+---
 
-<img width="300" height="600" alt="image" src="https://github.com/user-attachments/assets/eaf085fe-efd3-42b4-bc07-77db7d2997e6" />
+### Fitur Edit
 
+Ketika user memilih **Edit**, aplikasi akan berpindah ke halaman *Posting Page* untuk menyunting artikel. Perubahan dapat disimpan dengan menekan tombol **Update** di kanan atas.
 
-<img width="300" height="600" alt="image" src="https://github.com/user-attachments/assets/7cd5cbb3-8792-462c-bcbf-b2f76da3be7d" />
+<img width="300" alt="Edit Page" src="https://github.com/user-attachments/assets/41e93ecb-c15e-4e55-ab1a-d91c4da43d49" />
+
+Saat dalam mode edit, jika user menekan **Back** setelah melakukan perubahan, akan muncul dialog konfirmasi bahwa perubahan yang telah dilakukan tidak akan tersimpan.
+
+<img width="300" alt="Back Confirmation" src="https://github.com/user-attachments/assets/eaf085fe-efd3-42b4-bc07-77db7d2997e6" />
 
 
 **Posting Page**
@@ -74,3 +87,6 @@ Aplikasi ini merupakan aplikasi mobile sederhana berbasis Flutter yang berfungsi
 
 
 **Detail Page**
+
+
+<img width="300" height="600" alt="image" src="https://github.com/user-attachments/assets/c474f5e6-d005-4743-8625-342905695d40" />
