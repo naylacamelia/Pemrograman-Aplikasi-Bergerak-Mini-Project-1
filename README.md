@@ -42,13 +42,17 @@ Aplikasi ini merupakan aplikasi mobile sederhana berbasis Flutter yang berfungsi
 ## 🔍 Tampilan Aplikasi
 
 **Home Page**
+
 <img width="300" height="600" alt="image" src="https://github.com/user-attachments/assets/ace9ce9c-fbaf-45cd-b634-b14a76a8d1e3" />
+
 
 
 <img width="300" height="600" alt="image" src="https://github.com/user-attachments/assets/c474f5e6-d005-4743-8625-342905695d40" />
 
 
+
 <img width="300" height="600" alt="image" src="https://github.com/user-attachments/assets/76ab6a39-79ea-4db5-b050-5ac8c60bf38c" />
+
 
 
 <img width="300" height="600" alt="image" src="https://github.com/user-attachments/assets/41e93ecb-c15e-4e55-ab1a-d91c4da43d49" />
@@ -61,6 +65,7 @@ Aplikasi ini merupakan aplikasi mobile sederhana berbasis Flutter yang berfungsi
 
 
 **Posting Page**
+
 
 <img width="300" height="600" alt="image" src="https://github.com/user-attachments/assets/ea330d96-4801-4060-aa44-6ccfce0ae51d" />
 
