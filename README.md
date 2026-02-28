@@ -66,32 +66,38 @@ main.dart
 ---
 
 ## 🧩 Widget yang Digunakan
+### 1. MaterialApp
+Widget yang mengatur tampilan umum aplikasi, mulai dari tema, teks hingga mengatur style untuk button pada aplikasi.
 
-| Widget | Kegunaan |
-|---|---|
-| `Scaffold` | Struktur dasar halaman (AppBar + body) |
-| `AppBar` | Header halaman dengan judul dan tombol aksi |
-| `ListView.builder` | Menampilkan daftar artikel secara dinamis |
-| `Card` | Tampilan kontainer tiap artikel di list |
-| `ListTile` | Layout konten dalam card (judul, author, trailing) |
-| `FloatingActionButton` | Tombol tambah artikel baru |
-| `PopupMenuButton` | Menu opsi edit dan delete tiap artikel |
-| `AlertDialog` | Dialog konfirmasi hapus artikel dan keluar halaman |
-| `Navigator` | Perpindahan antar halaman |
-| `TextField` | Input judul, deskripsi, author, dan konten artikel |
-| `TextEditingController` | Mengontrol dan membaca nilai tiap TextField |
-| `SingleChildScrollView` | Membuat halaman bisa di-scroll |
-| `ConstrainedBox` | Membatasi lebar konten agar tidak terlalu lebar di layar besar |
-| `Column` & `Row` | Menyusun widget secara vertikal dan horizontal |
-| `CircleAvatar` | Menampilkan ikon avatar penulis |
-| `Divider` | Garis pemisah antar bagian konten |
-| `PopScope` | Mencegat aksi back untuk konfirmasi keluar halaman posting |
-| `SnackBar` | Notifikasi ketika field belum terisi saat menyimpan |
-| `TextButton` | Tombol di dalam dialog dan AppBar actions |
-| `SafeArea` | Menghindari konten tertutup oleh status bar atau notch |
-| `SizedBox` | Memberi jarak antar widget |
-| `Padding` | Memberi ruang di dalam widget |
-| `setState()` | Memperbarui tampilan setelah data berubah |
+<img width="400" height="200" alt="image" src="https://github.com/user-attachments/assets/1b0efdd0-3d93-429b-95bd-3db1b88e7a02" />
+
+### 2. Scaffold
+Widget yang menjadi kerangka dasar, sebagaimana kontainer utama aplikasi, dengan menyediakan elemen seperti AppBar, body dan FloatingActionButton.
+
+<img width="400" height="200" alt="Screenshot 2026-02-28 201514" src="https://github.com/user-attachments/assets/d091daf4-ba87-4339-ab51-7a580d347642" />
+
+### 3. AppBar
+Appbar merupakan header aplikasi. Dalam project ini, appbar menjadi tempat untuk meletakkan tombol "publish" dan "update" artikel serta menyediakan tombol kembali di setiap halaman.
+
+<img width="400" height="200" alt="image" src="https://github.com/user-attachments/assets/bb102e8d-6965-493a-b0ee-24492543f7bc" />
+
+### 4. TextField
+TextField merupakan widget berupa form input yang memungkinkan pengguna menginputkan teks pada aplikasi. Dalam project ini, textfield digunakan pada "posting_page" untuk melakukan input judul, deskripsi, dan konten artikel serta menginputkan nama penulis.
+
+<img width="400" height="200" alt="image" src="https://github.com/user-attachments/assets/eeba2d71-91e7-4311-9eb1-6ebd838cc6f5" />
+
+### 5. Padding
+padding berfungsi untuk memberikan jarak/ruang dalam suatu widget. Salah satu penerapannya, padding digunakan untuk memberi space konten di dalam sebuah **Card**.
+
+<img width="400" height="200" alt="image" src="https://github.com/user-attachments/assets/71fb47a1-5598-47ff-b966-565f32a8d3c5" />
+
+### 6. Card
+Card digunakan untuk menampilkan setiap artikel dalam bentuk kotak menyerupai kontainer secara terstruktur, rapi dan terpisah.
+
+<img width="400" height="200" alt="image" src="https://github.com/user-attachments/assets/cba4745f-06c4-46e2-9b32-c8d6420ce02b" />
+
+### 7. ListView.Builder
+<img width="496" height="117" alt="image" src="https://github.com/user-attachments/assets/0abd626b-2083-4d40-bd79-92d87ca4943f" />
 
 ---
 
@@ -107,7 +113,7 @@ Halaman utama aplikasi yang menampilkan seluruh daftar artikel.
 
 ### More Option Icon
 
-Setiap artikel memiliki ikon titik tiga (⋮) di pojok kanan yang memberikan pilihan untuk mengedit atau menghapus artikel.
+Setiap artikel memiliki ikon titik tiga di pojok kanan yang memberikan pilihan untuk mengedit atau menghapus artikel.
 
 <img width="300" height="700" alt="Screenshot_1772245787" src="https://github.com/user-attachments/assets/82a45df4-0e31-4266-86fd-8eb3a31ffab0" />
 
