@@ -76,17 +76,34 @@ Saat dalam mode edit, jika user menekan **Back** setelah melakukan perubahan, ak
 
 <img width="300" alt="Back Confirmation" src="https://github.com/user-attachments/assets/eaf085fe-efd3-42b4-bc07-77db7d2997e6" />
 
+---
 
-**Posting Page**
-
+### Posting Page
+- Posting page merupakan laman dimana user menginputkan isi artikel dan melakukan publikasi. Laman ini memeiliki 3 TextField yang wajib diisi, yakni nama author, judul, dan isi konten serta 1 TextField yang bersifat opsional, yaitu deskripsi judul.
+- User dapat menekan tombol **"publish"** untuk mengunggah artikel tersebut.
 
 <img width="300" height="600" alt="image" src="https://github.com/user-attachments/assets/ea330d96-4801-4060-aa44-6ccfce0ae51d" />
 
+<img width="300" height="600" alt="image" src="https://github.com/user-attachments/assets/bb1845ed-da35-4eb0-b0f1-befe87bd0a2e" />
 
-<img width="300" height="600" alt="image" src="https://github.com/user-attachments/assets/94cc9545-9ca5-45e9-84bb-9088719591a0" />
+<img width="300" height="600" alt="image" src="https://github.com/user-attachments/assets/0e5bb8d5-8470-4271-b7e0-3b911cb3421a" />
 
 
-**Detail Page**
+- Jika field wajib tidak diisi, akan muncul pesan pemberitahuan singkat.
+  
+<img width="300" height="600" alt="image" src="https://github.com/user-attachments/assets/6a90c62c-b11e-4fef-a3fd-90e03613f4b3" />
 
+- Ketika user telah mengisi salah satu Field, kemudian menekan **"back"**, akan muncul dialog konfirmasi bahwa perubahan yang telah dilakukan tidak akan tersimpan.
+
+<img width="300" height="600" alt="image" src="https://github.com/user-attachments/assets/18004306-9ee4-4f29-a432-d988cfe20d74" />
+
+---
+
+### Detail Page
+Detail page merupakan laman dimana user membaca artikel. Laman ini memuat informasi sebagai berikut:
+1. judul artikel
+2. deskripsi judul (jika ada)
+3. nama author
+4. tanggal terbit artikel
 
 <img width="300" height="600" alt="image" src="https://github.com/user-attachments/assets/c474f5e6-d005-4743-8625-342905695d40" />
