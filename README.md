@@ -1,18 +1,46 @@
-# 📝 Aplikasi Publikasi Artikel
+# 📝 My Blog App
+
+Aplikasi mobile blogging pribadi sederhana berbasis Flutter.
+
+---
 
 ## 📖 Deskripsi Aplikasi
 
-Aplikasi ini merupakan aplikasi mobile sederhana berbasis Flutter yang berfungsi sebagai platform blogging pribadi. Pengguna dapat menulis artikel dengan judul, deskripsi, nama penulis, dan konten, lalu mempublikasikannya ke halaman utama. Aplikasi ini juga memungkinkan pengguna untuk memodifikasi artikel, mulai dari mengedit hingga menghapus.
+My Blog adalah aplikasi mobile sederhana berbasis Flutter yang berfungsi sebagai platform blogging pribadi. Pengguna dapat menulis artikel dengan judul, deskripsi, nama penulis, dan konten, lalu mempublikasikannya ke halaman utama. Aplikasi ini juga memungkinkan pengguna untuk memodifikasi artikel, mulai dari mengedit hingga menghapus. Data disimpan secara lokal (in-memory) menggunakan static list.
 
 ---
 
 ## ✨ Fitur Aplikasi
 
-- **Lihat Daftar Artikel** — Menampilkan semua artikel yang telah dipublikasikan dalam tampilan list.
-- **Baca Artikel** — Membuka halaman detail untuk membaca konten artikel secara lengkap.
-- **Unggah Artikel** — Membuat artikel baru dengan mengisi judul, deskripsi, nama penulis, dan konten.
-- **Edit Artikel** — Mengubah isi artikel yang sudah ada.
-- **Hapus Artikel** — Menghapus artikel dengan konfirmasi dialog terlebih dahulu.
+| Fitur | Deskripsi |
+|---|---|
+| **Halaman Utama** | Menampilkan semua artikel yang telah dipublikasikan|
+| **Baca Artikel** | Membuka halaman detail untuk membaca konten artikel secara lengkap |
+| **Unggah Artikel** | Membuat artikel baru dengan mengisi TextFiled yang bersifat wajib (judul, author, dan konten) dan deskripsi judul yang bersifat opsional |
+| **Edit Artikel** | Mengubah artikel yang telah dibuat |
+| **Hapus Artikel** | Menghapus artikel dengan konfirmasi dialog |
+
+---
+
+## 🗂️ Struktur Halaman
+
+Aplikasi ini terdiri dari **3 halaman** utama:
+
+```
+data
+└── article_data.dart
+
+models
+└── article.dart
+
+pages
+├── home_page.dart         
+├── detail_page.dart       
+└── posting_page.dart
+
+main.dart     
+```
+
 ---
 
 ## 🧩 Widget yang Digunakan
@@ -29,6 +57,7 @@ Aplikasi ini merupakan aplikasi mobile sederhana berbasis Flutter yang berfungsi
 | `AlertDialog` | Dialog konfirmasi hapus artikel dan keluar halaman |
 | `Navigator` | Perpindahan antar halaman |
 | `TextField` | Input judul, deskripsi, author, dan konten artikel |
+| `TextEditingController` | Mengontrol dan membaca nilai tiap TextField |
 | `SingleChildScrollView` | Membuat halaman bisa di-scroll |
 | `ConstrainedBox` | Membatasi lebar konten agar tidak terlalu lebar di layar besar |
 | `Column` & `Row` | Menyusun widget secara vertikal dan horizontal |
@@ -38,7 +67,11 @@ Aplikasi ini merupakan aplikasi mobile sederhana berbasis Flutter yang berfungsi
 | `SnackBar` | Notifikasi ketika field belum terisi saat menyimpan |
 | `TextButton` | Tombol di dalam dialog dan AppBar actions |
 | `SafeArea` | Menghindari konten tertutup oleh status bar atau notch |
+| `SizedBox` | Memberi jarak antar widget |
+| `Padding` | Memberi ruang di dalam widget |
+| `setState()` | Memperbarui tampilan setelah data berubah |
 
+---
 
 ## 🔍 Tampilan Aplikasi
 
@@ -46,7 +79,7 @@ Aplikasi ini merupakan aplikasi mobile sederhana berbasis Flutter yang berfungsi
 
 Halaman utama aplikasi yang menampilkan seluruh daftar artikel.
 
-<img width="300" alt="Home Page" src="https://github.com/user-attachments/assets/ace9ce9c-fbaf-45cd-b634-b14a76a8d1e3" />
+<img width="300" height="700" alt="Screenshot_1772213160" src="https://github.com/user-attachments/assets/f6187969-87ba-47a9-9b0a-0eb34f658076" />
 
 ---
 
@@ -54,7 +87,8 @@ Halaman utama aplikasi yang menampilkan seluruh daftar artikel.
 
 Setiap artikel memiliki ikon titik tiga (⋮) di pojok kanan yang memberikan pilihan untuk mengedit atau menghapus artikel.
 
-<img width="300" alt="More Option" src="https://github.com/user-attachments/assets/02930ed6-6e5e-4f5c-b191-930f1abd65c5" />
+<img width="300" height="700" alt="Screenshot_1772245787" src="https://github.com/user-attachments/assets/82a45df4-0e31-4266-86fd-8eb3a31ffab0" />
+
 
 ---
 
@@ -62,7 +96,8 @@ Setiap artikel memiliki ikon titik tiga (⋮) di pojok kanan yang memberikan pil
 
 Ketika user memilih **Delete**, akan muncul pop-up konfirmasi sebelum artikel benar-benar dihapus.
 
-<img width="300" alt="Delete Confirmation" src="https://github.com/user-attachments/assets/7cd5cbb3-8792-462c-bcbf-b2f76da3be7d" />
+<img width="300" height="700" alt="Screenshot_1772245902" src="https://github.com/user-attachments/assets/b85afb17-adfe-40c1-8f1b-0ed1dee8157b" />
+
 
 ---
 
@@ -70,40 +105,42 @@ Ketika user memilih **Delete**, akan muncul pop-up konfirmasi sebelum artikel be
 
 Ketika user memilih **Edit**, aplikasi akan berpindah ke halaman *Posting Page* untuk menyunting artikel. Perubahan dapat disimpan dengan menekan tombol **Update** di kanan atas.
 
-<img width="300" alt="Edit Page" src="https://github.com/user-attachments/assets/41e93ecb-c15e-4e55-ab1a-d91c4da43d49" />
+<img width="300" height="700" alt="Screenshot_1772245884" src="https://github.com/user-attachments/assets/9c2c44e3-eb0f-4b6c-9179-ced989425f2b" />
 
 Saat dalam mode edit, jika user menekan **Back** setelah melakukan perubahan, akan muncul dialog konfirmasi bahwa perubahan yang telah dilakukan tidak akan tersimpan.
 
-<img width="300" alt="Back Confirmation" src="https://github.com/user-attachments/assets/eaf085fe-efd3-42b4-bc07-77db7d2997e6" />
+<img width="300" height="700" alt="Screenshot_1772246025" src="https://github.com/user-attachments/assets/6f22be4e-9cf6-4d14-9307-45988de3ba10" />
 
 ---
 
 ### Posting Page
-- Posting page merupakan laman dimana user menginputkan isi artikel dan melakukan publikasi. Laman ini memeiliki 3 TextField yang wajib diisi, yakni nama author, judul, dan isi konten serta 1 TextField yang bersifat opsional, yaitu deskripsi judul.
-- User dapat menekan tombol **"publish"** untuk mengunggah artikel tersebut.
 
-<img width="300" height="600" alt="image" src="https://github.com/user-attachments/assets/ea330d96-4801-4060-aa44-6ccfce0ae51d" />
+Halaman untuk menulis dan mempublikasikan artikel baru. Terdapat 3 field wajib diisi (judul, nama author, konten) dan 1 field opsional (deskripsi).
 
-<img width="300" height="600" alt="image" src="https://github.com/user-attachments/assets/bb1845ed-da35-4eb0-b0f1-befe87bd0a2e" />
+<img width="300" height="700" alt="Screenshot_1772245910" src="https://github.com/user-attachments/assets/7d27e5ce-0490-4fc6-9db0-790fc8853c4d" />
 
-<img width="300" height="600" alt="image" src="https://github.com/user-attachments/assets/0e5bb8d5-8470-4271-b7e0-3b911cb3421a" />
+<img width="300" height="700" alt="Screenshot_1772263145" src="https://github.com/user-attachments/assets/b42df136-68e5-4707-9fc4-becb56caab6a" />
+
+<img width="300" height="700" alt="Screenshot_1772246040" src="https://github.com/user-attachments/assets/e1dfbaba-6cf5-4f5d-b31b-62b487489c0b" />
 
 
-- Jika field wajib tidak diisi, akan muncul pesan pemberitahuan singkat.
-  
-<img width="300" height="600" alt="image" src="https://github.com/user-attachments/assets/6a90c62c-b11e-4fef-a3fd-90e03613f4b3" />
+Jika field wajib tidak diisi, akan muncul pesan pemberitahuan singkat di bagian bawah layar.
 
-- Ketika user telah mengisi salah satu Field, kemudian menekan **"back"**, akan muncul dialog konfirmasi bahwa perubahan yang telah dilakukan tidak akan tersimpan.
+<img width="300" height="700" alt="Screenshot_1772246005" src="https://github.com/user-attachments/assets/d3c8d07e-0335-49e8-87a9-8e4b156eafe2" />
 
-<img width="300" height="600" alt="image" src="https://github.com/user-attachments/assets/18004306-9ee4-4f29-a432-d988cfe20d74" />
+Ketika user telah mengisi salah satu field kemudian menekan **Back**, akan muncul dialog konfirmasi bahwa draft tidak akan tersimpan.
+
+<img width="300" height="700" alt="Screenshot_1772246025" src="https://github.com/user-attachments/assets/dd8235e5-de7a-477f-a8ad-86d5b57f4c62" />
+
 
 ---
 
 ### Detail Page
-Detail page merupakan laman dimana user membaca artikel. Laman ini memuat informasi sebagai berikut:
-1. judul artikel
-2. deskripsi judul (jika ada)
-3. nama author
-4. tanggal terbit artikel
 
-<img width="300" height="600" alt="image" src="https://github.com/user-attachments/assets/c474f5e6-d005-4743-8625-342905695d40" />
+Halaman untuk membaca artikel secara lengkap. Memuat informasi berikut:
+1. Judul artikel
+2. Deskripsi judul (jika ada)
+3. Nama author
+4. Tanggal terbit artikel
+
+<img width="300" height="700" alt="Screenshot_1772245893" src="https://github.com/user-attachments/assets/66aec714-eb09-40eb-9e6e-56747fbc33a2" />
