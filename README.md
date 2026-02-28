@@ -10,7 +10,7 @@ Aplikasi ini merupakan aplikasi mobile sederhana berbasis Flutter yang berfungsi
 
 ---
 
-## ✨ Fitur Aplikasi
+## 💻 Fitur Aplikasi
 
 | Fitur | Deskripsi |
 |---|---|
@@ -22,29 +22,8 @@ Aplikasi ini merupakan aplikasi mobile sederhana berbasis Flutter yang berfungsi
 
 ---
 
-## ✨ Struktur Kode
 
-1. main.dart
-Entry point aplikasi. Menjalankan `MaterialApp` dan menetapkan `HomePage` sebagai halaman pertama yang ditampilkan saat aplikasi dibuka.
-
-2. models/article.dart
-Berisi definisi class `Article` yang menjadi blueprint untuk setiap artikel. Menyimpan properti `title`, `desc`, `author`, `content`, `status`, dan `date`. Terdapat juga getter `formattedDate` untuk memformat tanggal menjadi format yang lebih mudah dibaca (contoh: `Jun 6, 2025`).
-
-3. data/article_data.dart
-Berisi class `ArticleRepository` dengan static list `articles` sebagai penyimpanan data sementara (in-memory). Semua halaman mengakses dan memodifikasi data artikel melalui `ArticleRepository.articles`.
-
-4. pages/home_page.dart
-Halaman utama aplikasi yang menampilkan seluruh daftar artikel menggunakan `ListView.builder`. Setiap artikel ditampilkan dalam `Card` berisi nama author, tanggal, judul, dan cuplikan konten. Terdapat `FloatingActionButton` untuk membuat artikel baru, dan `PopupMenuButton` di tiap artikel untuk aksi edit dan delete.
-
-5. pages/detail_page.dart
-Halaman untuk membaca artikel secara lengkap. Menerima objek `Article` dari `HomePage` melalui constructor, lalu menampilkan judul, deskripsi, nama author, tanggal terbit, dan konten artikel.
-
-6. pages/posting_page.dart
-Halaman form untuk menulis artikel baru maupun mengedit artikel yang sudah ada. Menggunakan 4 `TextField` dengan `TextEditingController` untuk mengelola input. Halaman ini bersifat dual-mode — jika menerima parameter `article` dan `index`, maka mode edit aktif dan tombol akan berubah menjadi **Update**. Jika tidak, mode tulis baru aktif dengan tombol **Publish**.
-
----
-
-## 🗂️ Struktur Halaman
+## 💻 Struktur Halaman
 
 Aplikasi ini terdiri dari **3 halaman** utama:
 
@@ -65,7 +44,7 @@ main.dart
 
 ---
 
-## 🧩 Widget yang Digunakan
+## 💻 Widget yang Digunakan
 ### 1. MaterialApp
 Widget yang mengatur tampilan umum aplikasi, mulai dari tema, teks hingga mengatur style untuk button pada aplikasi.
 
@@ -96,8 +75,42 @@ Card digunakan untuk menampilkan setiap artikel dalam bentuk kotak menyerupai ko
 
 <img width="400" height="200" alt="image" src="https://github.com/user-attachments/assets/cba4745f-06c4-46e2-9b32-c8d6420ce02b" />
 
-### 7. ListView.Builder
-<img width="496" height="117" alt="image" src="https://github.com/user-attachments/assets/0abd626b-2083-4d40-bd79-92d87ca4943f" />
+### 7. ListView
+ListView digunakan untuk menampilkan kumpulan data (artikel) dalam bentuk daftar yang bisa discroll. Dalam project ini, listview digunakan untuk menampilkan card artikel secara berurutan.
+
+<img width="400" height="200" alt="image" src="https://github.com/user-attachments/assets/8fff736d-c35a-4884-9bb1-023bba281f7b" />
+
+
+### 8. ListView.Builder
+Widget ini digunakan untuk menampilkan daftar artikel dalam bentuk carad berdasarkan dara yang terdapat dalam list articles.
+
+<img width="400" height="200" alt="image" src="https://github.com/user-attachments/assets/0abd626b-2083-4d40-bd79-92d87ca4943f" />
+
+### 8. ListTile
+Widget ini berguna untuk meletakkan elemen dalam satu baris tunggal yang dilengkapi dengan traliing. Pada Home_page, listile digunakan untuk menyusun konten card yang meliputi ikon profil, nama penulis, judul dan konten artikel.
+
+<img width="400" height="200" alt="image" src="https://github.com/user-attachments/assets/402352ee-30e3-426b-98fd-a11fb923aa5e" />
+
+### 9. ElevatedButton
+ElevatedButton merupakan tombol yang bisa ditekan oleh pengguna untuk menjalankan suatu aksi. Pada project ini, elevatedbutton digunakan sebagai tombol publish dan update artikel.
+
+<img width="400" height="200" alt="image" src="https://github.com/user-attachments/assets/d7c9ee88-9680-42be-8965-e5a07d26581e" />
+
+### 10. Container
+Container berguna untuk membungkus widget sehingga dapat diatur posisi dan jaraknya. Salah satu penrapannya, container digunakan untuk mengatur jarak tombol pada appbar.
+
+<img width="400" height="200" alt="image" src="https://github.com/user-attachments/assets/3bdd0a87-85f9-4ec3-b1ea-79b3f796de19" />
+
+### 11. AlertDialog
+Widget AlertDialog digunakan untuk menampilkan pop up/dialog peringatan sebagai bentuk konfirmasi kpd pengguna. contohnya digunakan ketika pengguna hendak keluar dari laman ketika sedang menulis artikel. Hal ini bertujuan untuk mencegah terhapusnya draft artikel secara tanpa sengaja.
+
+<img width="400" height="200" alt="image" src="https://github.com/user-attachments/assets/37f2e4cf-69c3-4901-8bf9-dd081f5995a3" />
+
+### 12. TextButton
+Textbutton digunakan sebagai tombol aksi di dalam dialog.
+
+<img width="400" height="200" alt="image" src="https://github.com/user-attachments/assets/d9b554f5-5a88-4fcd-9139-91a1f48bded7" />
+
 
 ---
 
