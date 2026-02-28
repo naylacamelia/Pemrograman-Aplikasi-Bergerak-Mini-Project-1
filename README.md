@@ -12,8 +12,8 @@ Aplikasi ini merupakan aplikasi mobile sederhana berbasis Flutter yang berfungsi
 
 ## 💻 Fitur Aplikasi
 
-| Fitur | Deskripsi |
-|---|---|
+| Fitur | Kegunaan |
+|-----|---|
 | **Halaman Utama** | Menampilkan semua artikel yang telah dipublikasikan|
 | **Baca Artikel** | Membuka halaman detail untuk membaca konten artikel secara lengkap |
 | **Unggah Artikel** | Membuat artikel baru dengan mengisi TextFiled yang bersifat wajib (judul, author, dan konten) dan deskripsi judul yang bersifat opsional |
@@ -25,7 +25,7 @@ Aplikasi ini merupakan aplikasi mobile sederhana berbasis Flutter yang berfungsi
 
 ## 💻 Struktur Halaman
 
-Aplikasi ini terdiri dari **3 halaman** utama:
+Aplikasi ini terdiri dari **3 halaman** utama pada folder pages, dengan rincian sebagai berikut:
 
 ```
 data
