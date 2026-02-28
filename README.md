@@ -22,6 +22,28 @@ Aplikasi ini merupakan aplikasi mobile sederhana berbasis Flutter yang berfungsi
 
 ---
 
+## ✨ Struktur Kode
+
+1. main.dart
+Entry point aplikasi. Menjalankan `MaterialApp` dan menetapkan `HomePage` sebagai halaman pertama yang ditampilkan saat aplikasi dibuka.
+
+2. models/article.dart
+Berisi definisi class `Article` yang menjadi blueprint untuk setiap artikel. Menyimpan properti `title`, `desc`, `author`, `content`, `status`, dan `date`. Terdapat juga getter `formattedDate` untuk memformat tanggal menjadi format yang lebih mudah dibaca (contoh: `Jun 6, 2025`).
+
+3. data/article_data.dart
+Berisi class `ArticleRepository` dengan static list `articles` sebagai penyimpanan data sementara (in-memory). Semua halaman mengakses dan memodifikasi data artikel melalui `ArticleRepository.articles`.
+
+4. pages/home_page.dart
+Halaman utama aplikasi yang menampilkan seluruh daftar artikel menggunakan `ListView.builder`. Setiap artikel ditampilkan dalam `Card` berisi nama author, tanggal, judul, dan cuplikan konten. Terdapat `FloatingActionButton` untuk membuat artikel baru, dan `PopupMenuButton` di tiap artikel untuk aksi edit dan delete.
+
+5. pages/detail_page.dart
+Halaman untuk membaca artikel secara lengkap. Menerima objek `Article` dari `HomePage` melalui constructor, lalu menampilkan judul, deskripsi, nama author, tanggal terbit, dan konten artikel.
+
+6. pages/posting_page.dart
+Halaman form untuk menulis artikel baru maupun mengedit artikel yang sudah ada. Menggunakan 4 `TextField` dengan `TextEditingController` untuk mengelola input. Halaman ini bersifat dual-mode — jika menerima parameter `article` dan `index`, maka mode edit aktif dan tombol akan berubah menjadi **Update**. Jika tidak, mode tulis baru aktif dengan tombol **Publish**.
+
+---
+
 ## 🗂️ Struktur Halaman
 
 Aplikasi ini terdiri dari **3 halaman** utama:
